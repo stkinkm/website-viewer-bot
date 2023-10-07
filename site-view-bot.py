@@ -7,7 +7,7 @@ headers = {
 	"User-Agent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36"
 }
 
-print "Website Viewer"
+print ("Website Viewer")
 #Default Tor port configuration
 proxyPort=9050
 ctrlPort=9051
@@ -17,7 +17,7 @@ hits = input("Enter The number of Viewers : ")
 
 def run():
      response = tr.get(site, headers=headers,verify=False)
-     print "["+str(i)+"]" + " Site View Added With IP:" +  tr.get('http://ipecho.net/plain').content
+     print ("["+str(i)+"]" + " Site View Added With IP:" +  tr.get('http://ipecho.net/plain').content)
      tr.reset_identity()
 
 
