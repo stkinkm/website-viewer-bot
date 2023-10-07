@@ -17,7 +17,8 @@ hits = int(input("Enter The number of Viewers : "))
 
 def run():
     response = tr.get(site, headers=headers, verify=False)
-    print("[" + str(i) + "] Site View Added With IP:" + tr.get('http://ipecho.net/plain').content)
+    ip_address = tr.get('http://ipecho.net/plain').content.decode('utf-8')  # Decode bytes to string
+    print("[" + str(i) + "] Site View Added With IP:" + ip_address)
     tr.reset_identity()
 
 
